@@ -484,7 +484,7 @@ without an app release.
 - [x] **Android Auto (first cut)** - launchable in the car (with AA "Unknown sources"), live map + puck + route + current-maneuver card; start routes on the phone for now
 - [x] Settings toggles to **hide reviews** and **skip photo loading** (place pages stay lean, nothing is fetched)
 - [x] **In-app updater** - checks the newest GitHub release about once a day (Settings toggle), downloads the APK and installs through Android's normal installer; Obtainium still works as before
-- [x] **11 languages** - UI, spoken turn-by-turn, and Google place content localized (English + de es fr it nl pl pt ru sv uk)
+- [x] **12 languages** - UI, spoken turn-by-turn, and Google place content localized (English + de es fr it nl pl pt ru sv uk **he**); Hebrew is the first **RTL** locale (the app already declares `supportsRtl`, so Compose mirrors the layout)
 - [x] **Foreground navigation service** - screen-off guidance, notification, faster-route re-checks
 - [x] **Offline routing on-device (GraphHopper)** - a downloadable **135-region world catalog** (all US states, Canada, Europe, +) hosted on GitHub; saving an offline map area grabs its routing graph too
 - [x] **In-app light/dark**, one consistent Google-grey UI, custom POI markers, hillshade relief

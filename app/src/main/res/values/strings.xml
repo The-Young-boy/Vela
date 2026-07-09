@@ -26,7 +26,7 @@
     <string name="settings_units_imperial">Imperial (miles, feet)</string>
     <string name="settings_units_metric">Metric (kilometers, meters)</string>
     <string name="settings_language">Language</string>
-    <string name="settings_language_hint">Sets the language for spoken turn-by-turn directions (English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Polish, Swedish, Ukrainian), independent of your phone\'s system language. Pick a matching voice in Voice library below. The rest of the app\'s on-screen text is being translated next.</string>
+    <string name="settings_language_hint">Sets the language for spoken turn-by-turn directions (English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Polish, Swedish, Ukrainian, Hebrew), independent of your phone\'s system language. Pick a matching voice in Voice library below. The rest of the app\'s on-screen text is being translated next.</string>
     <string name="settings_voice">Voice</string>
     <string name="settings_voice_fallback_name">voice</string>
     <string name="settings_voice_downloading">Downloading %1$s… %2$d%%</string> <!-- format -->
