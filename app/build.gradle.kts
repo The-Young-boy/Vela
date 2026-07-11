@@ -89,6 +89,12 @@ android {
                 keyAlias = System.getenv("VELA_KEY_ALIAS") ?: "vela"
                 keyPassword = System.getenv("VELA_KEYSTORE_PASSWORD")
             }
+            // Sign with ALL schemes. AGP drops v1 (JAR) by default when minSdk >= 24, leaving a
+            // v2-only APK; a number of devices / OEM package installers then report "package appears
+            // to be invalid" on sideload. Force v1+v2+v3 for the widest install compatibility.
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
         }
     }
 
