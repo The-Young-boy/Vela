@@ -530,4 +530,6 @@
     <string name="settings_ui_scale">גודל הממשק</string>
     <string name="place_avoid_tolls">הימנע מכבישי אגרה</string>
     <string name="place_avoid_highways">הימנע מכבישים מהירים</string>
+    <string name="shortcut_home">בית</string>
+    <string name="shortcut_work">עבודה</string>
 </resources>
