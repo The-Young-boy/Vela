@@ -91,6 +91,8 @@ class PlaceStatusTest {
         assertEquals(false, SearchParser.parseOpenNow("Stängt ⋅ Öppnar 09:00", "sv"))
         assertEquals(true, SearchParser.parseOpenNow("Відчинено ⋅ Зачиняється о 19:00", "uk"))
         assertEquals(false, SearchParser.parseOpenNow("Зачинено ⋅ Відчиниться о 09:00", "uk"))
+        assertEquals(true, SearchParser.parseOpenNow("פתוח ⋅ נסגר ב-19:00", "iw"))
+        assertEquals(false, SearchParser.parseOpenNow("סגור ⋅ נפתח ב-09:00", "iw"))
     }
 
     @Test fun `unknown language falls back to the english table, never to open`() {
@@ -100,9 +102,9 @@ class PlaceStatusTest {
 
     /** STATUS_LANGS gates GoogleMapsDataSource.localized()'s hl= rewrite: the scrape may only ask
      *  Google for status text in a language parseOpenNow can read, else openNow is always null and
-     *  the UI can't colour open/closed. It MUST equal the shipped keyword-table languages (11). */
+     *  the UI can't colour open/closed. It MUST equal the shipped keyword-table languages (13). */
     @Test fun `STATUS_LANGS covers exactly the shipped status-table languages`() {
-        val expected = setOf("en", "fr", "de", "es", "it", "pt", "nl", "ru", "pl", "sv", "uk")
+        val expected = setOf("en", "fr", "de", "es", "it", "pt", "nl", "ru", "pl", "sv", "uk", "iw", "he")
         assertEquals(expected, SearchParser.STATUS_LANGS)
     }
 }
