@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Vela Maps</string>
+    <string name="app_name">Vela HE</string>
 
     <!-- shared search-category chip labels (map + along-route); the search QUERY stays English in code -->
     <string name="cat_restaurants">Restaurants</string>
@@ -558,4 +558,6 @@
     <string name="settings_ui_scale">Interface size</string>
     <string name="place_avoid_tolls">Avoid tolls</string>
     <string name="place_avoid_highways">Avoid highways</string>
+    <string name="shortcut_home">Home</string>
+    <string name="shortcut_work">Work</string>
 </resources>

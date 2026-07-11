@@ -301,7 +301,7 @@ object SearchParser {
      *  a temp-closed place STAYS on the map — the UI banners it instead. */
     private val TEMP_CLOSED_WORDS = listOf(
         "Temporarily", "temporairement", "Vorübergehend", "temporalmente", "temporaneamente",
-        "temporariamente", "Tijdelijk", "Временно", "Tymczasowo", "Tillfälligt", "Тимчасово",
+        "temporariamente", "Tijdelijk", "Временно", "Tymczasowo", "Tillfälligt", "Тимчасово", "זמנית",
     )
 
     internal fun isTemporarilyClosed(vararg status: String?): Boolean =
@@ -325,6 +325,10 @@ object SearchParser {
         "pl" to listOf("Zamknięte", "Otwarcie", "Tymczasowo"),
         "sv" to listOf("Stängt", "Öppnar", "Tillfälligt"),
         "uk" to listOf("Зачинено", "Відчиниться", "Тимчасово"),
+        // Hebrew: "סגור" (closed, also prefixes "סגור זמנית/לצמיתות"), "נפתח"/"ייפתח" (opens → closed now).
+        // Keyed "iw" (Locale.getDefault().language yields the legacy code on Android) + "he" for parity.
+        "iw" to listOf("סגור", "נפתח", "ייפתח"),
+        "he" to listOf("סגור", "נפתח", "ייפתח"),
     )
 
     /** Languages [parseOpenNow] actually has a keyword table for. `GoogleMapsDataSource.localized()`
@@ -347,6 +351,9 @@ object SearchParser {
         "pl" to listOf("Otwarte", "Zamknięcie"),
         "sv" to listOf("Öppet", "Stänger"),
         "uk" to listOf("Відчинено", "Зачиняється"),
+        // Hebrew: "פתוח" (open), "נסגר" (closes later → open now).
+        "iw" to listOf("פתוח", "נסגר"),
+        "he" to listOf("פתוח", "נסגר"),
     )
 
     /** Live status text → open/closed, in the language the scrape requested (`hl=` follows
