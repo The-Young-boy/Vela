@@ -23,12 +23,14 @@ object AppLocale {
     /** The languages Vela's generated nav voice is translated into (and, rolling out, the UI chrome).
      *  This is the source of truth for the in-app language picker — keep it in sync with the NavStrings
      *  table in :core. */
-    val SUPPORTED = listOf("en", "fr", "de", "es", "it", "pt", "nl", "ru", "pl", "sv", "uk")
+    // "he" — on JDK 17+ (useOldISOCodes=false) Locale normalizes the old code "iw" → "he", so the
+    // resolved language code, the res/values-he folder, and NavStrings.forLanguage all agree on "he".
+    val SUPPORTED = listOf("en", "fr", "de", "es", "it", "pt", "nl", "ru", "pl", "sv", "uk", "he")
 
     private val ENDONYMS = mapOf(
         "en" to "English", "fr" to "Français", "de" to "Deutsch", "es" to "Español",
         "it" to "Italiano", "pt" to "Português", "nl" to "Nederlands", "ru" to "Русский",
-        "pl" to "Polski", "sv" to "Svenska", "uk" to "Українська",
+        "pl" to "Polski", "sv" to "Svenska", "uk" to "Українська", "he" to "עברית",
     )
 
     /** The language's own name (endonym) — what a speaker of it expects to see in a language list. */

@@ -83,7 +83,7 @@ Fingerprint and full instructions in [FDROID.md](FDROID.md).
   step-by-step guidance to the platform.
 - **No account, no tracking.** No Google account, no GMS, no telemetry. What
   Google's servers can and cannot see is documented plainly in [PRIVACY.md](PRIVACY.md).
-- **The rest.** Android Auto, 11 languages, in-app light/dark, full D-pad operation
+- **The rest.** Android Auto, 12 languages (incl. Hebrew — the first RTL locale), in-app light/dark, full D-pad operation
   for keypad phones, parking memory, place lists, and a built-in updater with
   weekly-stable or nightly channels.
 
