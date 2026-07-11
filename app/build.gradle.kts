@@ -13,7 +13,10 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "app.vela"
+        // Distinct applicationId (namespace stays app.vela, so R/BuildConfig/code are unchanged).
+        // A separate package Android/Play Protect has never seen — installs cleanly instead of being
+        // rejected as a differently-signed "app.vela" (the real Vela is signed by upstream's key).
+        applicationId = "app.vela.he"
         minSdk = 26
         targetSdk = 35
         // Overridable from CI: -PappVersionCode / -PappVersionName (ci.yml derives
